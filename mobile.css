@@ -1,11 +1,273 @@
 html {
   position: relative;
   min-height: 100%;
+  background-color: #edf8fe;
+}
+/*http://rubics-cube.se/*/
+body {
+  background-color: #edf8fe;
+  width: 100%;
+  background-size: cover;
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#algorithm-container {
+  width: 100%;
+  padding: 4px;
+  text-align: center;
+}
+
+#algorithm-container h6 {
+  margin-left: 4px;
+}
+
+#cube-container {
+  padding: 5px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.row-of-sides {
+  display: inline-flex;
+}
+
+.low-side {
+  height: 60px;
+  width: 90px;
+}
+.side {
+  width: 90px;
+}
+
+.row-of-stickers {
+  display: flex;
 }
 
 
-.container {
+
+.sticker {
+  width: 30px;
+  height: 30px;
+  border: 0.5px solid gray;
+}
+
+.rhombus-up {
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+}
+
+.rhombus-right {
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  /*-webkit-transform: skewY(-45deg) scaleX(0.70711);*/
+  /*transform: translate(350px,0);
+    -webkit-transform: translate(350px,0);  Chrome & Safari 
+    -o-transform: translate(350px,0); Opera 
+    -moz-transform: translate(350px,0);
+
+  transform: skewY(-45deg) scaleX(0.70711);*/
+}
+
+
+#up-row-up {
+  transform: skewX(-45deg) scaleY(0.6) translate(51px, 10px);
+}
+#up-row-middle {
+  transform: skewX(-45deg) scaleY(0.6) translate(21px, -10px);
+}
+#up-row-down {
+  transform: skewX(-45deg) scaleY(0.6) translate(-9px, -30px);
+}
+
+/* #up-row-up {
+  transform: skewX(-45deg) scaleY(0.6) translate(67px, 11px);
+}
+#up-row-middle {
+  transform: skewX(-45deg) scaleY(0.6) translate(27px, -16px);
+}
+#up-row-down {
+  transform: skewX(-45deg) scaleY(0.6) translate(-13px, -43px);
+} */
+
+/* (106px, 78px);
+  (66px, 51px);
+  (26px, 24px);
+*/
+
+
+#right-row-up {
+  transform: skewY(-45deg) scaleX(0.60) translate(-31px, -46px);
+}
+#right-row-middle {
+  transform: skewY(-45deg) scaleX(0.60) translate(-31px, -46px);
+}
+#right-row-down {
+  transform: skewY(-45deg) scaleX(0.60) translate(-31px, -46px);
+}
+
+
+
+#up-side > div > div {
+  background-color: white;
+}
+#left-side > div > div {
+  background-color: #FFA101;
+}
+#front-side > div > div {
+  background-color: #4AD256;
+}
+#right-side > div > div {
+  background-color: #F52002;
+}
+#back-side > div > div {
+  background-color: #095EC3;
+}
+#down-side > div > div {
+  background-color: #F0FF19;
+}
+
+#back-side {
+  transform: translate(-37px, -54px);
+}
+
+#all-buttons {
+  margin: 10px auto;
+  margin-top: 10px;
+  width: 268px;
+  height: 220px;
+}
+
+
+.long_btn1 {
+  height: 32px;
+  width: 128px;
+  margin-bottom: 10px;
+}
+
+.long_btn2 {
+  height: 32px;
+  width: 128px;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+#checkbox_area {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.isHidden {
   display: none;
+ } 
+
+ #btn1 {
+  background-image: url("images/rotate-right.png");
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
+            width: 40px; 
+            height: 40px;
+
+ }
+
+ #btn2 {
+  background-image: url("images/rotate-left.png");
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
+            width: 40px; 
+            height: 40px;
+}
+
+#btn3 {
+  background-image: url("images/rotate-up.png");
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
+            width: 40px; 
+            height: 40px;
 
 }
 
+#btn4 {
+  background-image: url("images/rotate-down.png");
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
+            width: 40px; 
+            height: 40px;
+}
+
+#btn5 {
+  background-image: url("images/rotate-left2d.png");
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
+            width: 40px; 
+            height: 40px;
+}
+
+#btn6 {
+  background-image: url("images/rotate-right2d.png");
+  background-size: 90% auto; 
+  background-repeat: no-repeat;
+  background-position: center;
+            width: 40px; 
+            height: 40px;
+}
+
+
+#secret-buttons button {
+  margin-top: 5px;
+}
+
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #0053ba;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.secret-button {
+  height: 30px;
+  width: 128px;
+}
