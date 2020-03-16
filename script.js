@@ -1015,15 +1015,66 @@ function scrambleClicked() {
     isPlaying = true;
     var myAlgorithm = [];
 
-    var rotation = "X"
+    var rotation1 = "X1"
+    var rotation2 = "X2"
 
     for (var i = 1; i < 31; i++) {
-        const candidateRotations = allRotations.filter(word => word[0] != [rotation[0]]);
-        rotation = candidateRotations[Math.floor(Math.random() * candidateRotations.length)];
-        myAlgorithm.push(rotation);
 
 
-        switch (rotation) {
+
+        var candidateRotations = allRotations.filter(word => word[0] != rotation2[0]);
+
+
+        // avoid L R L' or L2 R L2, etc
+        switch (rotation1[0]) {
+            case "L":
+                if (rotation2[0] === "R") {
+                    candidateRotations = candidateRotations.filter(word => word[0] != "L");
+                }
+                break;
+            case "F":
+                if (rotation2[0] === "B") {
+                    candidateRotations = candidateRotations.filter(word => word[0] != "F");
+                }
+                break;
+            case "R":
+                if (rotation2[0] === "L") {
+                    candidateRotations = candidateRotations.filter(word => word[0] != "R");
+                }
+                break;
+            case "B":
+                if (rotation2[0] === "F") {
+                    candidateRotations = candidateRotations.filter(word => word[0] != "B");
+                }
+                break;
+            case "U":
+                if (rotation2[0] === "D") {
+                    candidateRotations = candidateRotations.filter(word => word[0] != "U");
+                }
+                break;
+            case "D":
+                console.log("test1")
+                console.log(candidateRotations)
+                if (rotation2[0] === "U") {
+                    candidateRotations = candidateRotations.filter(word => word[0] != "D");
+                }
+                console.log("test2")
+                console.log(candidateRotations)
+                break;
+            default:
+            // code block
+        }
+
+
+
+
+        rotation1 = rotation2;
+        rotation2 = candidateRotations[Math.floor(Math.random() * candidateRotations.length)];
+
+        myAlgorithm.push(rotation2);
+
+
+        switch (rotation2) {
             case "L":
                 lClicked();
                 break;
