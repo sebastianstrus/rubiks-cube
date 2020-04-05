@@ -1,16 +1,17 @@
 html {
   position: relative;
   min-height: 100%;
-  background-color: #edf8fe;
+  background-color: #222222;
 }
 /*http://rubics-cube.se/*/
 body {
-  background-color: #edf8fe;
+  background-color: #222222;
   width: 100%;
   background-size: cover;
 }
 
 h4 {
+  color: #eeeeee;
   margin-top: 100px;
   margin-bottom: 0px;
   margin-left: auto;
@@ -27,6 +28,11 @@ h4 {
 
 #algorithm-container h6 {
   margin-left: 4px;
+  color: #eeeeee;
+}
+
+#checkbox_area label {
+  color: #eeeeee;
 }
 
 #cube-container {
